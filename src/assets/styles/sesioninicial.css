@@ -64,8 +64,11 @@
     justify-content: flex-end;
 }
 @media (max-width: 600px) {
-    .contorno_buscador_sesion_inicial{
+    .contenedor_buscador_sesion_inicial{
         width: 100%;
+    }
+    .contorno_buscador_sesion_inicial{
+        width: 20rem;
         
     }
     .palabras_busqueda_sesion_inicial{
