@@ -3,65 +3,57 @@ import { getPermalink } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Socio - políticos y económicos',
+      text: 'Desarrollo de software',
       links: [
-        // {
-        //   text: '👉 CIBERNÉTICA de las Elecciones y del Desastre Nacional.',
-        //   // href: getPermalink('/landing/saas'),
-        //   href:'#'
-        // },
-        // {
-        //   text: '👉 Convocatoria a la Intelectualidad Colombiana',
-        //   href:'#'
-        // },
         {
-          text: '👉 Los planos de la paz',
+          text: '💻👉 Cursos y contenido en desarrollo web',
           href:'/losplanosdelapaz'
         },
         {
-          text: '👉 Revolución científico tecnológica para el desarrollo nacional',
+          text: '📱👉 Cursos y contenido en desarrollo móvil',
           href:'/revolucioncientificotecnologica'
         },
         {
-          text: '👉 Decálogo de la paz',
+          text: '🖥️👉 Cursos y contenido en desarrollo escritorio',
           href:'/decalogodelapaz'
         },
-        // {
-        //   text: '👉 La Realización Personal o la Felicidad en un Nuevo Contrato Social',
-        //   href:'#'
-        // },
-        // {
-        //   text: '👉 Plan de Salvación Nacional',
-        //   href:'#'
-        // },
-        // {
-        //   text: '👉 Ideología del Libertador para la Segunda Independencia de América latina',
-        //   href:'#'
-        // },
-        // {
-        //   text: '👉 Temática libre',
-        //   href:'#'
-        // },
         {
-          text: '👉 Libros',
+          text: '🕸️👉 Cursos y contenido en frontend',
+          href:'/losplanosdelapaz'
+        },
+        {
+          text: '🔢👉 Cursos y contenido en backend',
+          href:'/losplanosdelapaz'
+        },
+        {
+          text: '🚀💻👉 Cursos y contenido en devops',
+          href:'/losplanosdelapaz'
+        },
+        {
+          text: '🧪👉 Cursos y contenido en testing',
+          href:'/losplanosdelapaz'
+        },
+        {
+          text: '📚👉 biblioteca',
           href:'/libro'
         },
       ],
     },
     {
-      text: '📰Blog',
-      href: getPermalink('/blog'),
+      text: 'Rutas de aprendizaje',
+      links: [
+        {
+          text: '💻👉 Ruta de cursos para el desarrollo web',
+          href:'/losplanosdelapaz'
+        },
+      ],
     },
     {
-      text: '🎙️Podcast',
-      href: getPermalink('/tag/podcast'),
+      text: '📚Biblioteca',
+      href: '/libro',
     },
     {
-      text: '📽️Reels',
-      href: getPermalink('/blog'),
-    },
-    {
-      text: '📚Libros',
+      text: '🐄Donación',
       href: '/libro',
     },
   ],

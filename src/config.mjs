@@ -1,15 +1,15 @@
 import defaultImage from './assets/images/default.png';
 
 const CONFIG = {
-  name: 'Sistemas autoorganizados',
+  name: 'Thinker cursos',
 
-  origin: 'https://sistemasautoorganizados.com',
+  origin: 'https://thinkercursos.vercel.app',
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'La magia de los sistemas autoorganizados',
+  title: 'Thinker Cursos',
   description:
-    '🚀 La magia de los sistemas autoorganizados, aplicada en todos los entornos de la vida',
+    '🚀 Plataforma de cursos, diplomados y contenido educativo',
   defaultImage: defaultImage,
 
   defaultTheme: 'light', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
@@ -24,8 +24,8 @@ const CONFIG = {
     timeZone: 'UTC',
   }),
 
-  googleAnalyticsId: 'G-X52LW1VK5Z', // or "G-XXXXXXXXXX",
-  googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M',
+  // googleAnalyticsId: 'G-X52LW1VK5Z', // or "G-XXXXXXXXXX",
+  // googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M',
 
   blog: {
     disabled: false,
