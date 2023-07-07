@@ -54,7 +54,7 @@ export const headerData = {
     },
     {
       text: '🐄Donación',
-      href: '/libro',
+      href: 'https://vaki.co/es/vaki/g3xnciA3CaPczUdS5tLs?utm_source=copy&utm_medium=vaki-page&utm_campaign=v4',
     },
   ],
 };
