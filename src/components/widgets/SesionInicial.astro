@@ -1,0 +1,92 @@
+---
+
+
+
+interface CallToAction {
+  text: string;
+  href: string;
+  icon?: string;
+}
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  callToAction?: string | CallToAction;
+  callToAction2?: string | CallToAction;
+  image?: string | any; // TODO: find HTMLElementProps
+}
+
+const {
+  title = await Astro.slots.render('title'),
+  callToAction = await Astro.slots.render('callToAction'),
+  callToAction2 = await Astro.slots.render('callToAction2'),
+  
+} = Astro.props;
+---
+
+<section class="relative md:-mt-[76px]">
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+  <div class="relative max-w-7xl mx-auto px-1 sm:px-1">
+    <div class="pt-0 md:pt-[20px] pointer-events-none"></div>
+    <div class="py-8 md:py-10">
+      <div class="text-center pb-10 md:pb-16 max-w-screen-lg mx-auto">
+        {
+          title && (
+            <h1
+              class="text-3xl md:text-3xl font-bold leading-tighter tracking-tighter mb-3 font-heading dark:text-gray-200"
+              set:html={title}
+            />
+          )
+        }
+        
+      <div style="display:flex; justify-content: center;">
+        
+          <iframe class="bg-gray-500 shadow-lg shadow-gray-500/50 hover:shadow-orange-300 rounded-md"   width="900" height="380" src="https://www.youtube.com/embed/QQUQKrvs7P8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
+        
+      </div>
+      <br/>
+        <div class="max-w-3xl mx-auto">
+          <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
+            {
+              callToAction && (
+                <div class="flex w-full sm:w-auto">
+                  {typeof callToAction === 'string' ? (
+                    <Fragment set:html={callToAction} />
+                  ) : (
+                    <a class="btn bg-green-500 sm:mb-0 w-full transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:shadow-orange-300 hover:bg-green-500 duration-300 ..." href={'/blog'}  rel="noopener">
+                      {callToAction?.icon && (
+                        <>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic-fill" viewBox="0 0 16 16">
+  <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/>
+  <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
+</svg>
+                        </>
+                      )}&nbsp;
+                      Podcast/Blog
+                    </a>
+                  )}
+                </div>
+              )
+            }
+            {
+              callToAction2 && (
+                <div class="flex w-full sm:w-auto">
+                  {typeof callToAction2 === 'string' ? (
+                    <Fragment set:html={callToAction2} />
+                  ) : (
+                    <a class="btn w-full transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:shadow-orange-300 hover:bg-gray-100 duration-300 ..." href={'/libro'}>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book-half" viewBox="0 0 16 16">
+  <path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+</svg>
+&nbsp; Libros
+                    </a>
+                  )} 
+                </div>
+              )
+            } 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

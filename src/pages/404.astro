@@ -1,33 +1,24 @@
 ---
-import BaseHead from '../components/Head/BaseHead.astro';
-import Nav from '../components/Nav.astro';
-import Footer from '../components/Footer/Footer.astro'
+import Layout from '~/layouts/BaseLayout.astro';
+import { getHomePermalink } from '~/utils/permalinks';
 
-let title = 'How To Code';
-let description = '';
+const title = `Error 404`;
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead title={title} description={description} />
-  </head>
-
-  <body class="bg-white text-black font-body leading-normal personality-casual">
-    <Nav />
-
-    <main class="py-12 lg:py-20">
-      <article class="max-w-6xl mx-auto px-3">
-        <header class="mx-auto max-w-3xl text-center content">
-          <h1 class="mb-4">You're up 404 creek</h1>
-          <p>Not much to see here but the intro to Dawson's Creek. Don't wait for your life to be over. There are other pages.
-            Go find one!</p>
-          <div class="embed-responsive aspect-ratio-4/3">
-            <iframe width="700" height="500" class="embed-responsive-item" src="https://www.youtube.com/embed/izpNuTxGIrM"
-              frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>
-          </div>
-        </header>
-      </article>
-    </main>
-    <Footer />
-  </body>
-</html>
+<Layout meta={{ title }}>
+  <section class="flex items-center h-full p-16">
+    <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
+      <div class="max-w-md text-center">
+        <h2 class="mb-8 font-bold text-9xl">
+          <span class="sr-only">Error</span>
+          <span class="text-primary">404</span>
+        </h2>
+        <p class="text-3xl font-semibold md:text-3xl">Lo lamento, No hemos podido encontrar esta página.</p>
+        <p class="mt-4 mb-8 text-lg text-muted dark:text-slate-400">
+          Pero puedes volver al Inicio.
+        </p>
+        <a rel="noopener noreferrer" href={getHomePermalink()} class="btn ml-4">Volver al inicio</a>
+      </div>
+    </div>
+  </section>
+</Layout>

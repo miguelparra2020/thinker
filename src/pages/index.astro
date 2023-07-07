@@ -1,49 +1,196 @@
 ---
-import BaseHead from '../components/Head/BaseHead.astro';
-import Nav from '../components/Nav.astro';
-import HomeHeader from '../components/HomeHeader.astro';
-import Card from '../components/Card.astro';
-import Footer from '../components/Footer/Footer.astro'
+import { SITE,  } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+import SesionInicial from '~/components/widgets/SesionInicial.astro';
+import Filosofia from '~/components/widgets/Filosofia.astro';
+import SesionCategorias from '~/components/widgets/SesionCategorias.astro';
+// Curso:
+// import Curso from '~/components/widgets/Curso.astro';
+import LatestPosts from '~/components/blog/LatestPosts.astro';
+// import BlogList from '~/components/blog/List.astro';
+// import { fetchPosts } from '~/utils/blog';
+// import { BLOG_BASE } from '~/utils/permalinks';
 
-interface MarkdownFrontmatter {
-  date: number;
-}
+// export async function getStaticPaths({ paginate }) {
+//   if (BLOG?.disabled || BLOG?.list?.disabled) return [];
+//   return paginate(await fetchPosts(), {
+//     params: { blog: BLOG_BASE || undefined },
+//     pageSize: BLOG.postsPerPage,
+//   });
+// }
 
-const title = 'Creek';
-const description = 'A Theme for Astro';
-const seoDescription = 'Creek is a theme for Astro static site generator';
+// const { page } = Astro.props;
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
 
-const allPosts = await Astro.glob<MarkdownFrontmatter>('./posts/*.md');
-const sortedPosts = allPosts.sort((a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf());
+
 ---
+<style>
+  .bienvenidos {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to bottom right,var(--tw-gradient-stops));
+    --tw-gradient-from: #2048ca;
+    --tw-gradient-to: rgb(99 102 241 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    --tw-gradient-to: rgb(217 70 239 / 0);
+    --tw-gradient-stops: var(--tw-gradient-from), #d1437c, var(--tw-gradient-to);
+    --tw-gradient-to: #861e76;
+}
+</style>
 
-<html lang="en">
+<Layout {meta}>
+  <!-- El menú y los links de menú están en el archivo data.js este archivo está por fuera del src -->
 
-<head>
-  <BaseHead title={title} description={seoDescription} />
-</head>
+  <!-- Sesión Inicial ******************* -->
 
-<body class="bg-white text-black font-body leading-normal personality-casual">
-  <Nav />
+  <SesionInicial 
+    callToAction={{ text: 'Get template', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:download' }}
+    callToAction2={{ text: 'Learn more', href: '#features' }}
+  >
+    <!-- Titulo de Bienvenida ******************* -->
+    <Fragment slot="title" >
+    <div class="mt-5">
+    <span class="bienvenidos">BIENVENIDOS</span> A LA MAGIA DE LOS SISTEMAS AUTOORGANIZADOS
+  </div>  
+    </Fragment>
+    <!-- Titulo de Bienvenida ******************* -->
+  </SesionInicial>
 
-  <main class="py-12 lg:py-20">
-    <article class="max-w-6xl mx-auto px-3">
-      <HomeHeader title={title} description={description} />
-      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8" data-test="articles-section">
-        {sortedPosts.map(p => <div class="col-span-1">
-          <Card post={p} />
-        </div>)}
-      </section>
-    </article>
-  </main>
+  <!-- Sesión Inicial ******************* -->
 
-  <section class="flex space-x-8 justify-center text-xl pt-8 font-bold">
-    <a href="/posts" class="mr-8" data-test="see-all-link">
-      See All<span class="squiggle">&rarr;</span>
-    </a>
-  </section>
+  <!-- Filosofía de la página ******************* -->
+  <Filosofia />
+  <!-- Filosofía de la página *************** -->
 
-  <Footer />
-</body>
+  <!-- Sesión de categorias ******************* -->
+  <SesionCategorias
+    title="Categorías"
+    items={[
+      [
+        {
+          title: 'socio-políticos y económicos',
+          description:
+            ' ',
+          icon: 'tabler:brand-tailwind',
+          link:'/blog',
+        },
+      //   {
+      //     title: 'Ciencia y Sociedad',
+      //     description:
+      //       'La magia como la autoorganización, nos sorprende en todo momento con cosas inesperadas. Aquella mediante métodos ocultos, y ésta mediante la sincronía que da origen a un nuevo sistema, con su respectivos orden, estructura y función...ver más ',
+      //     icon: 'tabler:rocket',
+      //     link:'/blog',
+      //   },
+      ],
+      [
+      //   {
+      //     title: 'Didáctica: Formación Y Educación',
+      //     description:
+      //       'La reivindicación de los derechos de la niñez o el regreso al paraíso terrenal; La Familiaridad como Fundamento de la Identidad Nacional... Ver más',
+      //     icon: 'tabler:list-check',
+      //     link:'/tag/astro',
+      //   },
+      //   {
+      //     title: 'Antivirales',
+      //     description:
+      //       '10 cosas que debe saber sobre como tratar las pandemias “La enfermedad no ataca a quien no le teme»; Nanovacuna Antiviral Bioenergética La Inmunidad obtenida de la Sinergia de las Medicinas Ancestrales Antipandémicas... ver más',
+      //     icon: 'tabler:arrows-right-left',
+      //     link:'/tag/astro',
+      //   },
+        {
+          title: 'Temática libre',
+          description:
+            'Encuentra más publicaciones en diversidad de temas... ver más',
+          icon: 'tabler:arrows-right',
+          link:'/tag/tematicalibre',
+        }
+      ],
+    ]}
+  />
+<!-- Sesión de categorias ******************* -->
 
-</html>
+<!-- Sesión del Curso ******************* -->
+  <!-- <Curso
+    title="La magía de los sistemas Auto organizados"
+    subtitle="Descripción del Curso"
+    highlight="Curso"
+    items={[
+      {
+        title: 'Contenido 1',
+        description:
+          'Descripción del contenido 1',
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Contenido 2',
+        description:
+          'Descripción del contenido 2',
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: 'Contenido 3',
+        description:
+          'Descripción del contenido 3',
+        icon: 'flat-color-icons:todo-list',
+      },
+      {
+        title: 'Contenido 4',
+        description:
+          'Descripción del contenido 4',
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Contenido 5',
+        description:
+          'Descripción del contenido 5',
+        icon: 'flat-color-icons:advertising',
+      },
+      {
+        title: 'Contenido 6',
+        description:
+          'Descripción del contenido 6',
+        icon: 'flat-color-icons:currency-exchange',
+      },
+      {
+        title: 'Contenido 7',
+        description:
+          'Descripción del contenido 7',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: 'Contenido 8',
+        description:
+          'Descripción del contenido 9',
+        icon: 'flat-color-icons:business-contact',
+      },
+      {
+        title: 'Contenido 9',
+        description:
+          'Descripción del contenido 9',
+        icon: 'icon-park:page-template',
+      },
+    ]}
+  /> -->
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <!-- <BlogList posts={page.data} /> -->
+
+  <LatestPosts
+    title="Publiaciones constantes, de nuestro pensamiento."
+    information={`
+		`}
+    postIds={[
+      'astrowind-template-in-depth.md',
+      'get-started-website-with-astro-tailwind-css.md',
+      'how-to-customize-astrowind-to-your-brand.md',
+      'useful-resources-to-create-websites.md',
+      
+    ]}
+  />
+</Layout>

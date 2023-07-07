@@ -1,0 +1,52 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const meta = {
+  title: 'libro el poder y el antipoder',
+  description: 'Libro para debatir y llegar a la verdad',
+  ogType: 'article',
+  dontUseTitleTemplate: true,
+};
+---
+    <style>
+        .imagenesLibro{
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+    </style>
+    <Layout {meta}>
+        <div class="imagenesLibro">
+            
+            <div class="flex items-center justify-center w-80">
+                <div class="w-full p-4">
+                    <div class="flex flex-col justify-center p-10 bg-white rounded-lg shadow-2xl card">
+                        <div class="prod-title">
+                            <p class="text-2xl font-bold text-gray-900 uppercase">
+                                Libro discurso del método
+                            </p>
+                            <p class="text-sm text-gray-400 uppercase">
+                              Autor: René Descartes 
+                            </p>
+                            <p class="text-sm text-gray-400 uppercase">
+                              formato: PDF
+                            </p>
+                        </div>
+                        <div class="prod-img">
+                            <img src="https://contralainercia.files.wordpress.com/2022/08/633cb95835684ddd9c98a5b8537db68f.jpg?w=733" class="object-cover object-center w-full"/>
+                        </div>
+                      <br/>
+                        <div class="grid gap-10 prod-info ">
+                            <div class="flex flex-col items-center justify-center text-gray-900 md:flex-row">
+                                <a href="https://forms.gle/fLzF4W4rgh4kWdid6" target="_blank" class="px-8 py-2 uppercase transition duration-200 ease-in border-2 border-gray-900 rounded-full hover:bg-gray-800 hover:text-white focus:outline-none">
+                                    Solicitar libro
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+</Layout>
