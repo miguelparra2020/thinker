@@ -1,0 +1,76 @@
+.titulo_sesion_inicial{
+    font-family: "Londrina Solid", sans-serif;
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 96px;
+    text-decoration: none solid rgb(18, 21, 30);
+    text-align: center;
+    text-transform: uppercase;
+    word-spacing: 0px;
+    color:  #12151E;
+    border: 0px solid  #12151E;
+}
+.descripcion_sesion_inicial{
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    line-height: 29.25px;
+    text-decoration: none solid rgb(18, 21, 30);
+    color:  #12151E;
+    text-align: center;
+}
+.contenedor_buscador_sesion_inicial{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.contorno_buscador_sesion_inicial{
+    width: 30rem;
+    height: 8vh;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 2px solid  #000000;
+    box-sizing: border-box;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+}
+.palabras_busqueda_sesion_inicial{
+    width: 75%;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 29.25px;
+    text-decoration: none solid rgb(18, 21, 30);
+    color:  #8a8f9d;
+    opacity: 0.5;
+}
+.icono_busqueda_sesion_inicial{
+    width: 10%;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+@media (max-width: 600px) {
+    .contorno_buscador_sesion_inicial{
+        width: 100%;
+        
+    }
+    .palabras_busqueda_sesion_inicial{
+        font-size: 20px;
+        font-weight: 300;
+    }
+    
+}
