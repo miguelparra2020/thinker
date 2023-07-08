@@ -1,56 +1,126 @@
 ---
 import'../../assets/styles/categorias.css'
 
+
 const categorias = [
   {
     nombre_categoria: "Desarrollo de software",
     imagen_categoria_avif: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688775863/Thinker%20files/sesarrollo_software_gvdpcw.avif",
     imagen_categoria_webp: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688775863/Thinker%20files/sesarrollo_software_gvdpcw.webp",
     imagen_categoria_jpg: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688775863/Thinker%20files/sesarrollo_software_gvdpcw.jpg",
-    abrir_categoria: "#",
-    cerrar_categoria:'',
-    backgroud:'background-color:#008095'
+    alt_categoria:'Imagen categoria Desarrollo de software',
+    id_modal:'modal_categoria_desarrollo_software',
+    abrir_categoria: 'btnAbrirModal_desarrollo',
+    cerrar_categoria:'btnCerrarModal_desarrollo',
+    backgroud:'background-color:#008095',
+    subcategorias:[
+                  {
+                    nombre_subcategoria:'💻👉 Cursos y contenido en desarrollo web',
+                    link_subcategoria:'/category/cursos-y-contenido-en-desarrollo-web'
+                  },
+                  {
+                    nombre_subcategoria:'📱👉 Cursos y contenido en desarrollo móvil',
+                    link_subcategoria:'/category/cursos-y-contenido-en-desarrollo-movil'
+                  },
+                  {
+                    nombre_subcategoria:'🖥️👉 Cursos y contenido en desarrollo escritorio',
+                    link_subcategoria:'/category/cursos-y-contenido-en-desarrollo-escritorio'
+                  },
+                  {
+                    nombre_subcategoria:'🖥️👉 Cursos y contenido en desarrollo escritorio',
+                    link_subcategoria:'/category/cursos-y-contenido-en-desarrollo-escritorio'
+                  },
+                  ],
+
   },
   {
-    nombre_categoria: "Rutas de aprendizaje",
+    nombre_categoria: "Rutas de Aprendizaje",
     imagen_categoria_avif: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688775863/Thinker%20files/ruta_de_aprendizaje_jmll7b.avif",
     imagen_categoria_webp: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688775863/Thinker%20files/ruta_de_aprendizaje_jmll7b.webp",
     imagen_categoria_jpg: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688775863/Thinker%20files/ruta_de_aprendizaje_jmll7b.jpg",
-    abrir_categoria: "#",
-    cerrar_categoria:'',
-    backgroud:'background-color:#EBEBEB'
+    alt_categoria:'Imagen categoria Rutas de aprendizaje',
+    id_modal:'modal_categoria_rutas_aprendizaje',
+    abrir_categoria: 'btnAbrirModal_rutas',
+    cerrar_categoria:'btnCerrarModal_rutas',
+    backgroud:'background-color:#EBEBEB',
+    subcategorias:[
+                  {
+                    nombre_subcategoria:'',
+                    link_subcategoria:''
+                  },
+                  {
+                    nombre_subcategoria:'',
+                    link_subcategoria:''
+                  },
+                  ],
   },
   {
     nombre_categoria: "Biblioteca",
     imagen_categoria_avif: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688778002/Thinker%20files/categoria_bibiloteca_tlcn00.avif",
     imagen_categoria_webp: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688778002/Thinker%20files/categoria_bibiloteca_tlcn00.webp",
     imagen_categoria_jpg: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688778002/Thinker%20files/categoria_bibiloteca_tlcn00.jpg",
-    abrir_categoria: "#",
-    cerrar_categoria:'',
-    backgroud:'background-color:#008095'
+    alt_categoria:'Imagen categoria Biblioteca',
+    id_modal:'modal_categoria_biblioteca',
+    abrir_categoria: 'btnAbrirModal_biblioteca',
+    cerrar_categoria:'btnCerrarModal_biblioteca',
+    backgroud:'background-color:#008095',
+    subcategorias:[
+                  {
+                    nombre_subcategoria:'',
+                    link_subcategoria:''
+                  },
+                  {
+                    nombre_subcategoria:'',
+                    link_subcategoria:''
+                  },
+                  ],
   },
   {
     nombre_categoria: "Donación",
     imagen_categoria_avif: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688778269/Thinker%20files/Vaki_guwr7h.avif",
     imagen_categoria_webp: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688778269/Thinker%20files/Vaki_guwr7h.webp",
     imagen_categoria_jpg: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688778269/Thinker%20files/Vaki_guwr7h.jpg",
-    abrir_categoria: "#",
-    cerrar_categoria:'',
-    backgroud:'background-color:#EBEBEB'
+    alt_categoria:'Imagen categoria Donación',
+    id_modal:'modal_categoria_donacion',
+    abrir_categoria: 'btnAbrirModal_donacion',
+    cerrar_categoria:'btnCerrarModal_donacion',
+    backgroud:'background-color:#EBEBEB',
+    subcategorias:[
+                  {
+                    nombre_subcategoria:'',
+                    link_subcategoria:''
+                  },
+                  {
+                    nombre_subcategoria:'',
+                    link_subcategoria:''
+                  },
+                  ],
   },
   {
     nombre_categoria: "Aplicación móvil",
     imagen_categoria_avif: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688778403/Thinker%20files/aplicacion_aouhba.avif",
     imagen_categoria_webp: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688778403/Thinker%20files/aplicacion_aouhba.webp",
     imagen_categoria_jpg: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688778403/Thinker%20files/aplicacion_aouhba.jpg",
-    abrir_categoria: "#",
-    cerrar_categoria:'',
-    backgroud:'background-color:#008095'
+    alt_categoria:'Imagen categoria ',
+    id_modal:'modal_categoria_aplicacion',
+    abrir_categoria: 'btnAbrirModal_aplicacion',
+    cerrar_categoria:'btnCerrarModal_aplicacion',
+    backgroud:'background-color:#008095',
+    subcategorias:[
+                  {
+                    nombre_subcategoria:'',
+                    link_subcategoria:''
+                  },
+                  {
+                    nombre_subcategoria:'',
+                    link_subcategoria:''
+                  },
+                  ],
   }
 ];
 
 ---
-<section>
+<section >
   <div class="sesion_categorias">
     <div class="titulo_categorias ">
       Categorías
@@ -62,16 +132,70 @@ const categorias = [
       {
         categorias.map((categoria) => {
           return (
+          <div id={categoria.id_modal} class="fixed inset-0 z-10 overflow-y-auto hidden"> 
+              <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">   
+                  <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+                <div class="fixed inset-0 z-10 overflow-y-auto">
+                  <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                    <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                      <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                        <div class="sm:flex sm:items-start">
+                          <div class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-green-100 sm:mx-0 sm:h-10 sm:w-10">
+                              <picture class="img_categoria_modal">
+                                  <source srcset={categoria.imagen_categoria_avif} type="image/avif" class="img_categoria_modal">
+                                  <source srcset={categoria.imagen_categoria_webp} type="image/webp" class="img_categoria_modal">
+                                  <img src={categoria.imagen_categoria_jpg} alt={categoria.alt_categoria} class="img_categoria_modal">
+                              </picture>
+                          </div>
+                          <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                            <div class="text-base font-semibold leading-6 text-gray-900" id="modal-title">Categoría de {categoria.nombre_categoria}</div>
+                            <div class="mt-2">
+                              <p class="text-sm text-gray-500">En esta categoría puedes ver:</p>
+                              <div>
+                                {
+                                  categoria.subcategorias.map((items) => {
+                                                return (
+                                                    <a href={items.link_subcategoria}>
+                                                      <button class="border border-indigo-600 rounded-md m-2 p-2 drop-shadow-md hover:bg-gray-200" style="text-align: left">
+                                                      {items.nombre_subcategoria}
+                                                      </button>
+                                                    </a>
+                                                );
+                                              })
+                                
+                                }
+                                  
+                                
+                              </div>
+                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                        <button id={categoria.cerrar_categoria}  type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">Cancelar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+            
+
+            
             <div class=" bg-white rounded-xl shadow-md hover:shadow-xl  overflow-hidden card_categoria">
                 <div class="area_imagen_categoria" style={categoria.backgroud}>
                   <div class="contenedor_img_categoria" >
                     <picture class="img_categoria">
                         <source srcset={categoria.imagen_categoria_avif} type="image/avif" class="img_categoria">
                         <source srcset={categoria.imagen_categoria_webp} type="image/webp" class="img_categoria">
-                        <img src={categoria.imagen_categoria_jpg} alt="Logotipo de Thinker" class="img_categoria">
-                      </picture>
+                        <img src={categoria.imagen_categoria_jpg} alt={categoria.alt_categoria} class="img_categoria">
+                    </picture>
                   </div>
                 </div>
+
                 <div class="area_detalle_categoria">
                   <div class="text-s sm:text-xl font-serif font-semibold m-2">{categoria.nombre_categoria}</div>
                   <button id={categoria.abrir_categoria} class="bg-indigo-900 hover:bg-cyan-500 text-white font-semibold text-xs px-2 py-1 rounded mx-2 button_ver_categoria">
@@ -87,7 +211,165 @@ const categorias = [
           );
           
         })
+        
       }
     </div>
   </div>
 </section>
+
+<script>
+
+// Modal para la categoría desarrollo
+
+const btnAbrirModal_desarrollo = document.getElementById('btnAbrirModal_desarrollo');
+const btnCerrarModal_desarrollo = document.getElementById('btnCerrarModal_desarrollo');
+const modalContainer_desarrollo = document.getElementById('modal_categoria_desarrollo_software');
+
+if (btnAbrirModal_desarrollo && modalContainer_desarrollo) {
+  btnAbrirModal_desarrollo.addEventListener('click', function() {
+    abrirModal_desarrollo();
+  });
+}
+
+if (btnCerrarModal_desarrollo && modalContainer_desarrollo) {
+  btnCerrarModal_desarrollo.addEventListener('click', function() {
+    cerrarModal_desarrollo();
+  });
+}
+
+function abrirModal_desarrollo() {
+  if (modalContainer_desarrollo) {
+    modalContainer_desarrollo.classList.remove('hidden');
+  }
+}
+function cerrarModal_desarrollo() {
+  if (modalContainer_desarrollo) {
+    modalContainer_desarrollo.classList.add('hidden');
+  }
+}
+
+// Modal para la categoría Rutas
+
+const btnAbrirModal_rutas = document.getElementById('btnAbrirModal_rutas');
+const btnCerrarModal_rutas = document.getElementById('btnCerrarModal_rutas');
+const modalContainer_rutas= document.getElementById('modal_categoria_rutas_aprendizaje');
+
+if (btnAbrirModal_rutas && modalContainer_rutas) {
+  btnAbrirModal_rutas.addEventListener('click', function() {
+    abrirModal_rutas();
+  });
+}
+
+if (btnCerrarModal_rutas && modalContainer_rutas) {
+  btnCerrarModal_rutas.addEventListener('click', function() {
+    cerrarModal_rutas();
+  });
+}
+
+function abrirModal_rutas() {
+  if (modalContainer_rutas) {
+    modalContainer_rutas.classList.remove('hidden');
+  }
+}
+function cerrarModal_rutas() {
+  if (modalContainer_rutas) {
+    modalContainer_rutas.classList.add('hidden');
+  }
+}
+
+// Modal para la categoría Biblioteca
+
+const btnAbrirModal_biblioteca = document.getElementById('btnAbrirModal_biblioteca');
+const btnCerrarModal_biblioteca = document.getElementById('btnCerrarModal_biblioteca');
+const modalContainer_biblioteca= document.getElementById('modal_categoria_biblioteca');
+
+if (btnAbrirModal_biblioteca && modalContainer_biblioteca) {
+  btnAbrirModal_biblioteca.addEventListener('click', function() {
+    abrirModal_biblioteca();
+  });
+}
+
+if (btnCerrarModal_biblioteca && modalContainer_biblioteca) {
+  btnCerrarModal_biblioteca.addEventListener('click', function() {
+    cerrarModal_biblioteca();
+  });
+}
+
+function abrirModal_biblioteca() {
+  if (modalContainer_biblioteca) {
+    modalContainer_biblioteca.classList.remove('hidden');
+  }
+}
+function cerrarModal_biblioteca() {
+  if (modalContainer_biblioteca) {
+    modalContainer_biblioteca.classList.add('hidden');
+  }
+}
+
+// Modal para la categoría Donación
+
+const btnAbrirModal_donacion = document.getElementById('btnAbrirModal_donacion');
+const btnCerrarModal_donacion = document.getElementById('btnCerrarModal_donacion');
+const modalContainer_donacion= document.getElementById('modal_categoria_donacion');
+
+if (btnAbrirModal_donacion && modalContainer_donacion) {
+  btnAbrirModal_donacion.addEventListener('click', function() {
+    abrirModal_donacion();
+  });
+}
+
+if (btnCerrarModal_donacion && modalContainer_donacion) {
+  btnCerrarModal_donacion.addEventListener('click', function() {
+    cerrarModal_donacion();
+  });
+}
+
+function abrirModal_donacion() {
+  if (modalContainer_donacion) {
+    modalContainer_donacion.classList.remove('hidden');
+  }
+}
+function cerrarModal_donacion() {
+  if (modalContainer_donacion) {
+    modalContainer_donacion.classList.add('hidden');
+  }
+}
+
+// Modal para la categoría Aplicación Móvil
+
+const btnAbrirModal_aplicacion = document.getElementById('btnAbrirModal_aplicacion');
+const btnCerrarModal_aplicacion = document.getElementById('btnCerrarModal_aplicacion');
+const modalContainer_aplicacion= document.getElementById('modal_categoria_aplicacion');
+
+if (btnAbrirModal_aplicacion && modalContainer_aplicacion) {
+  btnAbrirModal_aplicacion.addEventListener('click', function() {
+    abrirModal_aplicacion();
+  });
+}
+
+if (btnCerrarModal_aplicacion && modalContainer_aplicacion) {
+  btnCerrarModal_aplicacion.addEventListener('click', function() {
+    cerrarModal_aplicacion();
+  });
+}
+
+function abrirModal_aplicacion() {
+  if (modalContainer_aplicacion) {
+    modalContainer_aplicacion.classList.remove('hidden');
+  }
+}
+function cerrarModal_aplicacion() {
+  if (modalContainer_aplicacion) {
+    modalContainer_aplicacion.classList.add('hidden');
+  }
+}
+
+
+</script>
+
+
+
+
+
+
+
