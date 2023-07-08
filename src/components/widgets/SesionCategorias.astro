@@ -1,72 +1,92 @@
 ---
-import { Icon } from 'astro-icon';
+import'../../assets/styles/categorias.css'
 
-interface Item {
-  title: string;
-  description: string;
-  icon?: string;
-  link: string;
-}
+const categorias = [
+  {
+    nombre_categoria: "Desarrollo de software",
+    imagen_categoria_avif: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688775863/Thinker%20files/sesarrollo_software_gvdpcw.avif",
+    imagen_categoria_webp: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688775863/Thinker%20files/sesarrollo_software_gvdpcw.webp",
+    imagen_categoria_jpg: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688775863/Thinker%20files/sesarrollo_software_gvdpcw.jpg",
+    abrir_categoria: "#",
+    cerrar_categoria:'',
+    backgroud:'background-color:#008095'
+  },
+  {
+    nombre_categoria: "Rutas de aprendizaje",
+    imagen_categoria_avif: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688775863/Thinker%20files/ruta_de_aprendizaje_jmll7b.avif",
+    imagen_categoria_webp: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688775863/Thinker%20files/ruta_de_aprendizaje_jmll7b.webp",
+    imagen_categoria_jpg: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688775863/Thinker%20files/ruta_de_aprendizaje_jmll7b.jpg",
+    abrir_categoria: "#",
+    cerrar_categoria:'',
+    backgroud:'background-color:#EBEBEB'
+  },
+  {
+    nombre_categoria: "Biblioteca",
+    imagen_categoria_avif: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688778002/Thinker%20files/categoria_bibiloteca_tlcn00.avif",
+    imagen_categoria_webp: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688778002/Thinker%20files/categoria_bibiloteca_tlcn00.webp",
+    imagen_categoria_jpg: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688778002/Thinker%20files/categoria_bibiloteca_tlcn00.jpg",
+    abrir_categoria: "#",
+    cerrar_categoria:'',
+    backgroud:'background-color:#008095'
+  },
+  {
+    nombre_categoria: "Donación",
+    imagen_categoria_avif: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688778269/Thinker%20files/Vaki_guwr7h.avif",
+    imagen_categoria_webp: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688778269/Thinker%20files/Vaki_guwr7h.webp",
+    imagen_categoria_jpg: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688778269/Thinker%20files/Vaki_guwr7h.jpg",
+    abrir_categoria: "#",
+    cerrar_categoria:'',
+    backgroud:'background-color:#EBEBEB'
+  },
+  {
+    nombre_categoria: "Aplicación móvil",
+    imagen_categoria_avif: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688778403/Thinker%20files/aplicacion_aouhba.avif",
+    imagen_categoria_webp: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688778403/Thinker%20files/aplicacion_aouhba.webp",
+    imagen_categoria_jpg: "https://res.cloudinary.com/dvey7dssc/image/upload/v1688778403/Thinker%20files/aplicacion_aouhba.jpg",
+    abrir_categoria: "#",
+    cerrar_categoria:'',
+    backgroud:'background-color:#008095'
+  }
+];
 
-export interface Props {
-  title?: string;
-  subtitle?: string;
-  highlight?: string;
-  items: Array<Array<Item>>;
-}
-
-const {
-  title = await Astro.slots.render('title'),
-  subtitle = await Astro.slots.render('subtitle'),
-  highlight,
-  items = [],
-} = Astro.props;
 ---
-
-<section class="scroll-mt-16" id="features">
-  <div class="px-4 py-16 mx-auto max-w-6xl lg:px-8 lg:py-20">
-    {
-      (title || subtitle || highlight) && (
-        <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
-          {highlight && (
-            <p
-              class="text-base text-primary dark:text-blue-200 font-semibold tracking-wide uppercase"
-              set:html={highlight}
-            />
-          )}
-          {title && (
-            <h2
-              class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
-              set:html={title}
-            />
-          )}
-
-          {subtitle && (
-            <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400" set:html={subtitle} />
-          )}
-        </div>
-      )
-    }
-    <div class="grid mx-auto space-y-6 md:grid-cols-2 md:space-y-0 text-center">
+<section>
+  <div class="sesion_categorias">
+    <div class="titulo_categorias ">
+      Categorías
+    </div>
+    <div class="detalles_categorias">
+      Puedes encontrar los subtemas ingresando a cada categoría:
+    </div>
+    <div class="contenedor_categorias">
       {
-        items.map((subitems) => (
-          <div class="space-y-8 sm:px-8 text-center">
-            {subitems.map(({ title,  icon,link }) => (
-              <a href={link}>
-              <div class="flex flex-row max-w-md text-center">
-                <div class="mb-4 mr-4 text-center">
-                  <div class="flex items-center justify-center text-center w-12 h-12 rounded-full bg-green-600 dark:bg-green-700 shadow-lg shadow-gray-500/50 hover:shadow-orange-300 ">
-                    {icon && <Icon name={icon} class="w-6 h-6 text-white icon-light" />}
+        categorias.map((categoria) => {
+          return (
+            <div class=" bg-white rounded-xl shadow-md hover:shadow-xl  overflow-hidden card_categoria">
+                <div class="area_imagen_categoria" style={categoria.backgroud}>
+                  <div class="contenedor_img_categoria" >
+                    <picture class="img_categoria">
+                        <source srcset={categoria.imagen_categoria_avif} type="image/avif" class="img_categoria">
+                        <source srcset={categoria.imagen_categoria_webp} type="image/webp" class="img_categoria">
+                        <img src={categoria.imagen_categoria_jpg} alt="Logotipo de Thinker" class="img_categoria">
+                      </picture>
                   </div>
                 </div>
-                <div>
-                  <h3 class="mb-3 text-xl font-bold text-center">{title}</h3>
+                <div class="area_detalle_categoria">
+                  <div class="text-s sm:text-xl font-serif font-semibold m-2">{categoria.nombre_categoria}</div>
+                  <button id={categoria.abrir_categoria} class="bg-indigo-900 hover:bg-cyan-500 text-white font-semibold text-xs px-2 py-1 rounded mx-2 button_ver_categoria">
+                    <span>
+                    Ver categoría </span>&nbsp;&nbsp;
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                      <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                      <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                    </svg>
+                  </button>
                 </div>
-              </div>
-            </a>
-            ))}
-          </div>
-        ))
+            </div>
+          );
+          
+        })
       }
     </div>
   </div>
