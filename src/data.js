@@ -32,11 +32,7 @@ export const headerData = {
         {
           text: '🧪👉 Cursos y contenido en testing',
           href:'/losplanosdelapaz'
-        },
-        {
-          text: '📚👉 biblioteca',
-          href:'/libro'
-        },
+        }
       ],
     },
     {
