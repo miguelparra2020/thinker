@@ -27,8 +27,20 @@ const categorias = [
                     link_subcategoria:'/category/cursos-y-contenido-en-desarrollo-escritorio'
                   },
                   {
-                    nombre_subcategoria:'🖥️👉 Cursos y contenido en desarrollo escritorio',
-                    link_subcategoria:'/category/cursos-y-contenido-en-desarrollo-escritorio'
+                    nombre_subcategoria:'🕸️👉 Cursos y contenido en frontend',
+                    link_subcategoria:'/category/cursos-y-contenido-en-frontend'
+                  },
+                  {
+                    nombre_subcategoria:'🔢👉 Cursos y contenido en backend',
+                    link_subcategoria:'/category/cursos-y-contenido-en-backend'
+                  },
+                  {
+                    nombre_subcategoria:'🚀💻👉 Cursos y contenido en devops',
+                    link_subcategoria:'/category/cursos-y-contenido-en-devops'
+                  },
+                  {
+                    nombre_subcategoria:'🧪👉 Cursos y contenido en testing',
+                    link_subcategoria:'/category/cursos-y-contenido-en-testing'
                   },
                   ],
 
@@ -141,15 +153,15 @@ const categorias = [
                     <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
                       <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                         <div class="sm:flex sm:items-start">
-                          <div class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-green-100 sm:mx-0 sm:h-10 sm:w-10">
+                          <div class="mt-10 mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-green-100 sm:mx-0 sm:h-10 sm:w-10 img_categoria_modal">
                               <picture class="img_categoria_modal">
                                   <source srcset={categoria.imagen_categoria_avif} type="image/avif" class="img_categoria_modal">
                                   <source srcset={categoria.imagen_categoria_webp} type="image/webp" class="img_categoria_modal">
                                   <img src={categoria.imagen_categoria_jpg} alt={categoria.alt_categoria} class="img_categoria_modal">
                               </picture>
                           </div>
-                          <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                            <div class="text-base font-semibold leading-6 text-gray-900" id="modal-title">Categoría de {categoria.nombre_categoria}</div>
+                          <div class="mt-10 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                            <div class="mt-10 text-base font-semibold leading-6 text-gray-900" id="modal-title">Categoría de {categoria.nombre_categoria}</div>
                             <div class="mt-2">
                               <p class="text-sm text-gray-500">En esta categoría puedes ver:</p>
                               <div>
