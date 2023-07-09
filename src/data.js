@@ -7,32 +7,32 @@ export const headerData = {
       links: [
         {
           text: '💻👉 Cursos y contenido en desarrollo web',
-          href:'/losplanosdelapaz'
+          href:'/category/cursos-y-contenido-en-desarrollo-web'
         },
-        {
-          text: '📱👉 Cursos y contenido en desarrollo móvil',
-          href:'/revolucioncientificotecnologica'
-        },
-        {
-          text: '🖥️👉 Cursos y contenido en desarrollo escritorio',
-          href:'/decalogodelapaz'
-        },
-        {
-          text: '🕸️👉 Cursos y contenido en frontend',
-          href:'/losplanosdelapaz'
-        },
-        {
-          text: '🔢👉 Cursos y contenido en backend',
-          href:'/losplanosdelapaz'
-        },
-        {
-          text: '🚀💻👉 Cursos y contenido en devops',
-          href:'/losplanosdelapaz'
-        },
-        {
-          text: '🧪👉 Cursos y contenido en testing',
-          href:'/losplanosdelapaz'
-        }
+        // {
+        //   text: '📱👉 Cursos y contenido en desarrollo móvil',
+        //   href:'/revolucioncientificotecnologica'
+        // },
+        // {
+        //   text: '🖥️👉 Cursos y contenido en desarrollo escritorio',
+        //   href:'/decalogodelapaz'
+        // },
+        // {
+        //   text: '🕸️👉 Cursos y contenido en frontend',
+        //   href:'/losplanosdelapaz'
+        // },
+        // {
+        //   text: '🔢👉 Cursos y contenido en backend',
+        //   href:'/losplanosdelapaz'
+        // },
+        // {
+        //   text: '🚀💻👉 Cursos y contenido en devops',
+        //   href:'/losplanosdelapaz'
+        // },
+        // {
+        //   text: '🧪👉 Cursos y contenido en testing',
+        //   href:'/losplanosdelapaz'
+        // }
       ],
     },
     {
