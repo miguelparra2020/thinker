@@ -189,7 +189,7 @@ a{
 * 📖 **Frontend:** hace referencia al área de trabajo del lado del cliente, al área visual
 * 📖 **Backend:** hace referencia al área de trabajo del lado del servidor, del lado donde se almacena los datos.
 * 📖 **Python:** es el lenguaje de programación:
-* 📖 **Repositorio GitHub:** <a href="https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git" target="_blank"> Link github </a>
+* 📎 **Repositorio GitHub:** <a href="https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git" target="_blank"> Link github </a>
 
 
 Para realizar todo proyecto es bueno tener una perspectiva global de la infraestructura y de como va a funcionar el proyecto.
@@ -216,7 +216,7 @@ Pues empecemos para ir entendiendo nuestro proyecto:
 - lo mismo tener una vista de clientes con la misma funcionalidad.
 - y tener una vista de ventas con la misma funcionalidad pero relacionando en cada venta el producto a vender y el cliente al que se le vendió.
 
-> * 📖 **Repositorio GitHub:** <a href="https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git" target="_blank"> Link github </a>
+> * 📎 **Repositorio GitHub:** <a href="https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git" target="_blank"> Link github </a>
 
 ### Empecemos creando la infraestructura del código antes mencionada y luego nos introducimos a fondo en su desarrollo.
 
@@ -260,24 +260,23 @@ Lo que se dice con este comando es que por medio de django que es el framework v
 
 Así fue el nuestro: 
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%206.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690075122/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_30_vzruz1.png)
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%207.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690075138/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_31_quelaz.png)
 
-Ya nos creó el proyecto base, por fuera el archivo [manage.py](http://manage.py) que es como el inicializador de comandos del proyecto y nos permite muchas funcionalidades y dentro del proyecto utilizaremos más el archivo **settings** y el archivo **Urls**
+Ya nos creó el proyecto base, por fuera el archivo manage.py que es como el inicializador de comandos del proyecto y nos permite muchas funcionalidades y dentro del proyecto utilizaremos más el archivo **settings** y el archivo **Urls**
 
-<aside>
-📎 Recuerda ver los archivos en el Repositorio github: [https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git](https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git)
 
-</aside>
 
-# Ahora creamos la aplicación donde irá nuestras vistas, nuestros modelos, templates etc…
+> * 📎 **Repositorio GitHub:** <a href="https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git" target="_blank"> Link github </a>
+
+### Ahora creamos la aplicación donde irá nuestras vistas, nuestros modelos, templates etc…
 
 en la terminal enviamos el comando
 
 la app  llamémosla **StoreApp. (”Puedes llamarla como desees”)**
 
-- python [manage.py](http://manage.py/) startapp **<Nombre_De_La_App>**
+- python manage.py startapp **<Nombre_De_La_App>**
 
 así quedó la nuestra:
 
@@ -294,34 +293,31 @@ ejemplo:
 
 es lo mismo pero un poquito más corto
 
-# Ahora debemos comunicar nuestro proyecto principal con la APP
+### Ahora debemos comunicar nuestro proyecto principal con la APP
 
-ingresamos al proyecto, al archivo [setting.py](http://setting.py) y allí buscamos el apartado: **INSTALLED_APPS**
+ingresamos al proyecto, al archivo **setting.py** y allí buscamos el apartado: **INSTALLED_APPS**
 
 Que significa aplicaciones instaladas, a nuestro proyecto.
 
 allí incluimos el nombre de nuestra app:
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2010.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690075331/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_32_ugg7ku.png)
 
 tal cual se haya llamada al crearla.
 
-<aside>
-📎 Recuerda ver los archivos en el Repositorio github: [https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git](https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git)
+> * 📎 **Repositorio GitHub:** <a href="https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git" target="_blank"> Link github </a>
 
-</aside>
-
-# Ahora solo nos falta la base de datos SQLite.
+### Ahora solo nos falta la base de datos SQLite.
 
 a nuestro proyecto por defecto viene incluida dicha relación en el archivo settings. 
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2011.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690075399/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_33_uirt29.png)
 
 Esto es muy bueno ya que es una base de datos sencilla y fácil de manejar, para proyectos pequeños. cuando corremos el proyecto por primer vez si no tiene la base de datos creada ella se creará por primer ves en blanco. recuerda que puedes incluir otro o otros tipos de bases de datos más robustas, pero debes ver la documentación para implementarlas.
 
 en nuestro caso no debemos hacer nada sino solamente correr el proyecto por primer vez con el siguiente comando:
 
-- py [manage.py](http://manage.py) runserver
+- py **manage.py** runserver
 
 ![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2012.png)
 
