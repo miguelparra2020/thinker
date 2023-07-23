@@ -902,6 +902,8 @@ urlpatterns = [
 ]
 ```
 
+> * 📎 **Repositorio GitHub:** <a href="https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git" target="_blank"> Link github </a>
+
 podemos comprobar que cada ruta funcione, ponemos a correr el proyecto.
 
 py **manage.py** runserver
@@ -1015,6 +1017,9 @@ y en cada vista aparecerá el menú
 
 ![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690080593/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_72_mrcv44.png)
 
+
+> * 📎 **Repositorio GitHub:** <a href="https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git" target="_blank"> Link github </a>
+
 ### Ahora pintemos algunos daticos en cada vista:
 
 desde la función de las vistas, en **views.py** desde allí es donde le vamos a enviar los datos al archivo html de cada vista.
@@ -1113,11 +1118,11 @@ creemos unos dos productos más desde el área administrativa, para que veas com
 
 /admin → usuario: admin → contraseña: imda1234*
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2049.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690080865/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_75_j38ayk.png)
 
 y en la vista productos:
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2050.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690080918/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_76_zoofhu.png)
 
 En este momento solo estamos listando los datos que hay en la tabla productos.
 
@@ -1125,13 +1130,15 @@ Más adelante tenemos que hacer  el CRUD completo, ósea que podamos adicionar, 
 
 pero terminemos primero esto con las 3 vistas.
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2051.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690080941/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_77_sa4rqy.png)
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2052.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690080957/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_78_mgmszw.png)
+
+> * 📎 **Repositorio GitHub:** <a href="https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git" target="_blank"> Link github </a>
 
 Así queda el código:
 
-# views.py
+### views.py
 
 ```python
 from django.shortcuts import render
@@ -1158,7 +1165,7 @@ def vista_ventas(request):
     return render(request, 'pagina_ventas.html', {'ventas':ventas_get_list})
 ```
 
-# pagina_productos.html
+### pagina_productos.html
 
 ```html
 <!DOCTYPE html>
@@ -1187,7 +1194,7 @@ def vista_ventas(request):
 </html>
 ```
 
-# pagina_clientes.html
+### pagina_clientes.html
 
 ```html
 <!DOCTYPE html>
@@ -1215,7 +1222,7 @@ def vista_ventas(request):
 </html>
 ```
 
-# pagina_ventas.html
+### pagina_ventas.html
 
 ```html
 <!DOCTYPE html>
@@ -1248,7 +1255,7 @@ def vista_ventas(request):
 </html>
 ```
 
-# Ahora podemos hacer el Create
+### Ahora podemos hacer el Create
 
 El método que nos permita crear un nuevo producto, un nuevo cliente, una nueva venta
 
@@ -1256,13 +1263,13 @@ En Django podemos tener la posibilidad de crear un formulario acorde al modelo q
 
 Debemos de crear un nuevo archivo llamado
 
-- forms.py
+- **forms.py**
 
 Este archivo nos va a permitir traer el modelo determinado y al cual le vamos a insertar la información por medio de este.
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2053.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690081015/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_79_i3gvsk.png)
 
-# forms.py
+### forms.py
 
 ```python
 from django import forms
@@ -1287,6 +1294,8 @@ class VentasForm(forms.ModelForm):
         fields = '__all__'
 ```
 
+> * 📎 **Repositorio GitHub:** <a href="https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git" target="_blank"> Link github </a>
+
 Allí lo que hacemos es crear una clase de formulario que va a trabajar con cada modelo de datos.
 
 Debemos de crear una vista para cada formulario, cada vista de esta nos permita enviar la información que requiera cada modelo.
@@ -1295,9 +1304,9 @@ Ejemplo empezamos con Productos:
 
 Se crea 
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2054.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690081043/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_80_xgkox1.png)
 
-# crear_producto.html
+### crear_producto.html
 
 ```html
 <!DOCTYPE html>
@@ -1317,11 +1326,11 @@ Se crea
 </html>
 ```
 
-Este archivo html es el que va a mostrar el formulario de nuevo producto y este formulario se construye según el formato que trae de [forms.py](http://forms.py) y views.py
+Este archivo html es el que va a mostrar el formulario de nuevo producto y este formulario se construye según el formato que trae de **forms.py** y **views.py**
 
 Para poder ver esta vista html debemos hacer el mismo proceso que con cualquier vista
 
-urls → views → html
+**urls → views → html**
 
 Osea desde Urls se le asigna una Url pra la vista y desde la vista llama el archivo html
 
@@ -1344,15 +1353,15 @@ def crear_producto(request):
     return render(request, 'crear_producto.html', {'form': form})
 ```
 
-En esta función lo que hace es mandar el formato de formulario acorde al modelo que se llamó en el archivo [forms.py](http://forms.py), allí visualiza el tipo de datos que tiene ese modelo y es el que se pinta en en el archivo crear_producto.html, si el modelo tiene 10 atributos esos los pinta en dicha vista, es según el modelo. 
+En esta función lo que hace es mandar el formato de formulario acorde al modelo que se llamó en el archivo **forms.py**, allí visualiza el tipo de datos que tiene ese modelo y es el que se pinta en en el archivo crear_producto.html, si el modelo tiene 10 atributos esos los pinta en dicha vista, es según el modelo. 
 
 Luego al ya tener pintado el formulario hace una pequeña validación si el formulario está bien lo guarda y redirige al usuario a la vista productos
 
-![Revolución cientifico (3).png](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Revolucin_cientifico_(3).png)
+![Imagen](https://res.cloudinary.com/dvey7dssc/image/upload/v1690081125/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Revoluci%C3%B3n_cientifico_3_1_ejb83y.png)
 
 Así mismo hacemos las vistas de crear un nuevo cliente y una nueva venta:
 
-# crear_cliente.html
+### crear_cliente.html
 
 ```html
 <!DOCTYPE html>
@@ -1372,7 +1381,7 @@ Así mismo hacemos las vistas de crear un nuevo cliente y una nueva venta:
 </html>
 ```
 
-# views.py
+### views.py
 
 ```python
 from .forms import ProductoForm, ClientesForm 
@@ -1391,7 +1400,7 @@ def crear_cliente(request):
     return render(request, 'crear_cliente.html', {'form': form})
 ```
 
-# urls.py
+### urls.py
 
 ```python
 from StoreApp.views import crear_cliente
@@ -1403,35 +1412,32 @@ urlpatterns = [
 
 en la página de clientes también adicionamos un botón para que pueda ir a la url de crear cliente:
 
-# pagina_clientes.html
+### pagina_clientes.html
 
 ```python
 <a href="/crear_cliente/">Crear un nuevo cliente</a>
 ```
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2055.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690081169/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_81_njufva.png)
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2056.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690081185/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_82_symyil.png)
 
-<aside>
-📎 Recuerda ver los archivos en el Repositorio github: [https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git](https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git)
+> * 📎 **Repositorio GitHub:** <a href="https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git" target="_blank"> Link github </a>
 
-</aside>
+### Ya con lo explicado puedes entender todo el código montado en Github
 
-# Ya con lo explicado puedes entender todo el código montado en Github
-
-[https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git](https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git)
+> * 📎 **Repositorio GitHub:** <a href="https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git" target="_blank"> https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git </a>
 
 Así queda el proyecto:
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2057.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690081327/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_83_g6dzxy.png)
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2058.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690081343/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_84_ibcpsh.png)
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2059.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690081358/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_85_ciyfb5.png)
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2060.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690081372/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_86_zskhyt.png)
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2061.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690081387/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_87_qlhuky.png)
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2062.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690081401/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_88_zps1ry.png)
