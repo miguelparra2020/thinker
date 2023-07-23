@@ -571,20 +571,17 @@ Ya tenemos las 3 tablas que necesitamos:
 
 **y la de ventas con su llave primaria y secundarias**
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2035.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690076997/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_61_urxern.png)
 
-<aside>
-📎 Recuerda ver los archivos en el Repositorio github: [https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git](https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git)
+> * 📎 **Repositorio GitHub:** <a href="https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git" target="_blank"> Link github </a>
 
-</aside>
-
-# Podemos corroborar el optimo funcionamiento de las tablas por medio del área administrativa que nos da Django
+### Podemos corroborar el optimo funcionamiento de las tablas por medio del área administrativa que nos da Django
 
 para ello debemos de proporcionar los modelos a la vista de administración:
 
-Ingresamos al archivo [admin.py](http://admin.py) 
+Ingresamos al archivo **admin.py**
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2036.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690077050/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_62_stbu2j.png)
 
 Este archivo nos da la posibilidad de registrar las tablas o modelos al panel administrativo, nos sirve mucho por que desde allí le podemos realizar pruebas de funcionamiento a las tablas.
 
@@ -604,11 +601,11 @@ class Productos(admin.ModelAdmin):#el modelo se puede manejar como una clase
 # ver desde el panel administrativo un area de busqueda por id y por nombre
 ```
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2037.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690077072/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_63_uec1fw.png)
 
 Si ingresamos al área administrativa podemos notar ello, el modelo productos, el buscador y la lista de productos por columnas
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2038.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690077097/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_64_fonpjh.png)
 
 Así podemos hacer con los 3 modelos: productos, clientes y ventas
 
@@ -641,7 +638,7 @@ Hago un resumen de esto último:
 
 Creamos los modelos, que son las tablas para la base de datos, las migramos a la base de datos y ahora último las estamos manejando desde al área administrativa, donde esto nos permite validar que si se registre bien los datos en la base de datos e inclusive ver las relaciones entre tablas o inclusive ver las condiciones que hemos puesto:
 
-Mira bien el archivo [models.py](http://models.py) si te quedó bien:
+Mira bien el archivo **models.py** si te quedó bien:
 
 ```python
 from django.db import models
@@ -675,7 +672,7 @@ class Ventas(models.Model):
             raise ValidationError("La cantidad vendida no puede ser mayor al disponible.")
 ```
 
-mira bien el archivo [admin.py](http://admin.py) si te quedó bien:
+mira bien el archivo **admin.py** si te quedó bien:
 
 ```python
 from django.contrib import admin
@@ -706,19 +703,19 @@ al ingresar a la ruta /admin con el super usuario que ya creamos, te recuerdo:
 
 te aparece así:
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2039.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690077179/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_65_w7vrgu.png)
 
 las 3 tablas, los 3 modelos.
 
 puedes ensayar creando un cliente, un producto y una venta, y mira en ventas lo bonito que crea las relaciones y la condición que hemos puesto en la cantidad a vender
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2040.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690077198/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_66_aqrtva.png)
 
-# Si llegaste hasta aquí, felicítate!, ya hiciste un Backend básico y funcional.
+### Si llegaste hasta aquí, felicítate!, ya hiciste un Backend básico y funcional.
 
-# Ahora vamos por el Frontend:
+### Ahora vamos por el Frontend:
 
-Está facilito, no?
+**Está facilito, no?**
 
 Hagamos un resumen de lo que llevamos:
 
@@ -734,37 +731,31 @@ Hagamos un resumen de lo que llevamos:
 
 así ya tenemos el backend listo para ser usado en el frontend en las vistas del usuario:
 
-# Para el frontend necesitamos las 3 vistas
+### Para el frontend necesitamos las 3 vistas
 
 un componente que se repite en ellas es el menú, donde podamos pasar de una vista a otra sin inconveniente:
 
 vamos a hacer primero cada vista y posicionarnos en ellas, luego el componente que se repite y luego traemos los datos del backend.
 
-<aside>
-📎 Recuerda ver los archivos en el Repositorio github: [https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git](https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git)
+> * 📎 **Repositorio GitHub:** <a href="https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git" target="_blank"> Link github </a>
 
-</aside>
-
-# Vistas en el frontend, las vistas que verán nuestros usuarios:
+### Vistas en el frontend, las vistas que verán nuestros usuarios:
 
 dentro de nuestra aplicación debemos crear dos carpetas adicionales, la carpeta de templates y la carpeta static.
 
 allí se incluirá los archivos html y los archivos css o imágenes también.
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2041.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690080060/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_67_a8nnco.png)
 
 dentro de la app creamos las dos carpetas y los archivos principales, como el componente del menú que vamos a utilizar en todas las páginas y cada página, también los estilos css principalmente para el componente y uno global para las páginas.
 
 Puedes hacer la paginación como desees, inclusive entre más descompongas una página mucho mejor, por que hay cosas que se pueden repetir como un botón, un contenedor etc. en nuestro caso solo descomponemos el menú como algo utilizado en todas.
 
-<aside>
-📎 Recuerda ver los archivos en el Repositorio github: [https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git](https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git)
+> * 📎 **Repositorio GitHub:** <a href="https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git" target="_blank"> Link github </a>
 
-</aside>
+### Debemos ensayar que todas las páginas funcionen y el componente.
 
-# Debemos ensayar que todas las páginas funcionen y el componente.
-
-Para ello debemos exponer cada página en el archivo [views.py](http://views.py) que son las vistas y también a cada una darle una ruta.
+Para ello debemos exponer cada página en el archivo **views.py** que son las vistas y también a cada una darle una ruta.
 
 Empecemos con la vista productos:
 
@@ -818,7 +809,7 @@ urlpatterns = [
 
 Mira para que lo entiendas fácil, como funciona:
 
-![Revolución cientifico (2).png](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Revolucin_cientifico_(2).png)
+![imagen](https://res.cloudinary.com/dvey7dssc/image/upload/v1690080330/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Revoluci%C3%B3n_cientifico_2_1_elo8to.png)
 
 **en resumen**
 
@@ -828,7 +819,7 @@ al haber entendido esto creamos todas las vistas: productos, clientes y ventas
 
 los archivos html primero los identificamos:
 
-# pagina_productos.html
+### pagina_productos.html
 
 ```html
 <!DOCTYPE html>
@@ -844,7 +835,7 @@ los archivos html primero los identificamos:
 </html>
 ```
 
-# pagina_clientes.html
+### pagina_clientes.html
 
 ```html
 <!DOCTYPE html>
@@ -860,7 +851,7 @@ los archivos html primero los identificamos:
 </html>
 ```
 
-# pagina_ventas.html
+### pagina_ventas.html
 
 ```html
 <!DOCTYPE html>
@@ -876,7 +867,7 @@ los archivos html primero los identificamos:
 </html>
 ```
 
-Ahora llamamos estos archivos html desde views.py
+Ahora llamamos estos archivos html desde **views.py**
 
 ```python
 from django.shortcuts import render
@@ -895,7 +886,7 @@ def vista_ventas(request):
     return render(request, 'pagina_ventas.html')
 ```
 
-y asignamos a cada vista una url en urls.py
+y asignamos a cada vista una url en **urls.py**
 
 ```python
 from django.contrib import admin
@@ -913,29 +904,29 @@ urlpatterns = [
 
 podemos comprobar que cada ruta funcione, ponemos a correr el proyecto.
 
-py [manage.py](http://manage.py) runserver
+py **manage.py** runserver
 
 y en la url vamos añadiendo las rutas:
 
 cuando no hay nada:
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2042.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690080352/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_68_ytfn4h.png)
 
 cuando tiene la ruta clientes:
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2043.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690080375/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_69_n8vfmw.png)
 
 Cuando tiene la ruta ventas:
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2044.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690080395/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_70_mkgmyr.png)
 
 Está funcionando perfectamente:
 
-# Ahora ingresamos el componente del menú, navbar en todos los archivos html de vistas:
+### Ahora ingresamos el componente del menú, navbar en todos los archivos html de vistas:
 
 ya que es un componente que se va a repetir en todas las vistas:
 
-# componente_navbar.html
+### componente_navbar.html
 
 ```html
 <div>
@@ -945,7 +936,7 @@ ya que es un componente que se va a repetir en todas las vistas:
 
 para incrustar un componente en las páginas html debemos usar esto, en la parte del html que lo deseamos incrustar:
 
-**{% include '<ruta del componente>' %}**
+**{% include '<ruta_del_componente>' %}**
 
 por ejemplo nuestro componente en la página de productos quedaría así:
 
@@ -966,7 +957,7 @@ por ejemplo nuestro componente en la página de productos quedaría así:
 
 si los componentes estuvieran en una carpeta componentes o en otra ruta debemos cambiar acorde donde esté el componente ejemplo 
 
- {% include 'componentes/componente_navbar.html' %}
+**{% include 'componentes/componente_navbar.html' %}**
 
 ahora lo incluimos en todas las otras páginas:
 
@@ -1004,7 +995,7 @@ la página de ventas:
 </html>
 ```
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2045.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690080570/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_71_zcoaog.png)
 
 ya al haber quedado en todas las vistas seguimos con modificar dicho componente con los links de cada vista y pase de una vista a otra sin problema.
 
@@ -1022,15 +1013,15 @@ Así nos quedaría:
 
 y en cada vista aparecerá el menú
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2046.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690080593/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_72_mrcv44.png)
 
-# Ahora pintemos algunos daticos en cada vista:
+### Ahora pintemos algunos daticos en cada vista:
 
-desde la función de las vistas, en [views.py](http://views.py) desde allí es donde le vamos a enviar los datos al archivo html de cada vista.
+desde la función de las vistas, en **views.py** desde allí es donde le vamos a enviar los datos al archivo html de cada vista.
 
 Las views es como el intermediario de lo que ve el usuario y la base de datos. 
 
-En el contexto del patrón de diseño Modelo-Vista-Controlador (MVC), las [views.py](http://views.py/) en Django se asemejan al concepto de controlador.
+En el contexto del patrón de diseño Modelo-Vista-Controlador (MVC), las **views.py** en Django se asemejan al concepto de controlador.
 
 podemos crear un diccionario para ensayar antes de traernos los datos de la base de datos.
 
@@ -1079,13 +1070,13 @@ dentro de la página html a la que le enviamos dichos datos tiene que recorrer e
 </html>
 ```
 
-allí creamos una lista donde ese objeto que está llegando desde las [views.py](http://views.py) se va a desglosar por medio de un for, lo que hace el for es un ciclo que va a recorrer dicho objeto, y le va a asignar a la variable item cada valor que encuentra  en el objeto productos, pero adicional a esto cuando coge el item es según el criterio, en cada caso relaciona el item con id del producto, o con el nombre del producto, descripción etc. pinsa cada cosita relacionandolo al item:
+allí creamos una lista donde ese objeto que está llegando desde las **views.py** se va a desglosar por medio de un for, lo que hace el for es un ciclo que va a recorrer dicho objeto, y le va a asignar a la variable item cada valor que encuentra  en el objeto productos, pero adicional a esto cuando coge el item es según el criterio, en cada caso relaciona el item con id del producto, o con el nombre del producto, descripción etc. pinsa cada cosita relacionandolo al item:
 
 Resultado en la vista:
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2047.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690080651/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_73_ckft0y.png)
 
-ya pintamos datos desde [views.py](http://views.py) hacia el html
+ya pintamos datos desde **views.py** hacia el html
 
 **views → html**
 
@@ -1108,7 +1099,7 @@ los datos que tiene ese modelo en un objeto con todos esos datos.
 
 así vemos la vista:
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2048.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690080831/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_74_prk22b.png)
 
 No te vayas a perder es fácil:
 
