@@ -280,9 +280,9 @@ la app  llamémosla **StoreApp. (”Puedes llamarla como desees”)**
 
 así quedó la nuestra:
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%208.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690075822/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_35_fk49yr.png)
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%209.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690075839/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_36_k4gmnt.png)
 
 en los próximos comandos podemos acortarlo pasando de **python** a **py**
 
@@ -319,41 +319,41 @@ en nuestro caso no debemos hacer nada sino solamente correr el proyecto por prim
 
 - py **manage.py** runserver
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2012.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690075899/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_37_wpmqi4.png)
 
 Este comando corre el proyecto por primer vez y nos da una advertencia y es que nos da unos modelos para la base de datos de manera predeterminada en Django, estos modelos son para facilitarnos el manejo de la base de datos por un área predeterminada de administración, también nos permite hacer más fácil el proceso de autenticación de usuarios.
 
 Adicional con este comando nos creó la base de datos en cero, sin ningún dato pero ya con ella podemos trabajar.
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2013.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690075932/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_38_qwavrb.png)
 
 Si nos vamos y abrimos el puerto que nos genera el comando que enviamos nos debe aparecer lo siguiente:
 
 le puedes dar control + clic encima
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2014.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690075952/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_39_rajwet.png)
 
 y nos abre:
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2015.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690075967/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_40_vozcon.png)
 
 Para crear los modelos que nos recomienda Django para el área administrativa debemos enviar los siguientes comandos:
 
-- py [manage.py](http://manage.py) makemigrations
+- py **manage.py** makemigrations
 
-En este comando prepara la migración, acorde a los modelos que estén pendientes, en este caso son los modelos recomendados, pero cuando nosotros tengas los propios hechos en [models.py](http://models.py) también con este comando los prepara para ser enviados a la base de datos.
+En este comando prepara la migración, acorde a los modelos que estén pendientes, en este caso son los modelos recomendados, pero cuando nosotros tengas los propios hechos en **models.py** también con este comando los prepara para ser enviados a la base de datos.
 
-- py [manage.py](http://manage.py) migrate
+- py **manage.py** migrate
 
 En este comando ya realiza una sentencia SQL para inyectar la base de datos, es como si ya concretara la migración.
 
 Estos comandos van creando un historial de migraciones, si se desea efectuar una migración especifica se realiza el comando:
 
-- py [manage.py](http://manage.py) sqlmigrate <nombre_de_la_app> <numero_migracion>
+- py **manage.py** sqlmigrate <nombre_de_la_app> <numero_migracion>
 
 en nuestro caso solo enviamos la migración pendiente:
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2016.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690076046/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_41_gl4sxy.png)
 
 allí efectuó todos los modelos predeterminados para el área administrativa
 
@@ -361,21 +361,22 @@ Si abrimos la base de datos desde un visulizador de DB sqlite:
 
 Aquí lo puedes descargar:
 
-[https://sqlitebrowser.org/](https://sqlitebrowser.org/)
+> * 📎 **slqite browser:** <a href="https://sqlitebrowser.org" target="_blank"> https://sqlitebrowser.org </a>
+
 
 Al abrir este visualizador, la instalación es sencilla, todo siguiente y la instalas.
 
 cuando abres este visualizador, abrimos la base de datos así:
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2017.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690076187/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_42_g9c2zh.png)
 
 la buscamos en la carpeta donde tenemos el proyecto:
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2018.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690076202/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_43_ew81sq.png)
 
 Al tenerla abierta podemos ver varias tablas creadas.
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2019.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690076223/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_44_cdx063.png)
 
 Son las tablas del modelo predeterminado para el área de administración podemos ver autenticación de usuarios, permisos, migraciones, grupos, etc…
 
@@ -385,45 +386,45 @@ Esta área administrativa la podemos ver en la ruta /admin
 
 Inclusive está de manera predeterminada en el archivo Urls.py
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2020.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690076241/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_45_g9r6ex.png)
 
 Si nosotros corremos el proyecto, recuerda con el comando:
 
-- py [manage.py](http://manage.py) runserver
+- py **manage.py** runserver
 
 y vamos a la ruta /admin
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2021.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690076285/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_46_vwzz7f.png)
 
 nos va a aparecer el área administrativa de django.
 
 Para ingresar a esta área debemos crear un superuasuario con el comando:
 
-- py [manage.py](http://manage.py) createsuperuser
+- py **manage.py** createsuperuser
 
 debe tener varios parametros, por ejemplo que la clave no debe ser corta, que debe ser diferente al usuario, etc…
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2022.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690076423/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_47_jqhcoq.png)
 
-aquí cree: usuario: **admin**
+aquí cree: **usuario:** admin
 
-contraseña: **imda1234***
+**contraseña:** imda1234*
 
 ensayemos:
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2023.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690076481/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_48_vcdgaw.png)
 
-Ingresamos pero Django nos aparece en inglés podemos cambiar el idioma desde el Setting.py
+Ingresamos pero Django nos aparece en inglés podemos cambiar el idioma desde el **Setting.py**
 
-en el apartado: LANGUAGE_CODE = 'en-us’
+en el apartado: **LANGUAGE_CODE = 'en-us’**
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2024.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690076509/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_49_rc7c0p.png)
 
-lo pasamos a ‘es-co’ Español colombia
+lo pasamos a **‘es-co’** Español colombia
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2025.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690076532/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_50_lxtmb7.png)
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2026.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690076545/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_51_mgwndl.png)
 
 ya nos cambia la visualización a español.
 
@@ -441,18 +442,15 @@ Solo hemos creado el proyecto base o principal, luego creamos la aplicación don
 
 no es mucho lo que llevamos, pero vamos por un buen camino ya hicimos la estructura de trabajo que planteamos al principio.
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2027.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690076566/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_52_bbip1j.png)
 
 **en la realidad:**  
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2028.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690076584/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_53_bwphp8.png)
 
-<aside>
-📎 Recuerda ver los archivos en el Repositorio github: [https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git](https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git)
+> * 📎 **Repositorio GitHub:** <a href="https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git" target="_blank"> Link github </a>
 
-</aside>
-
-# Al tener ya la estructura con la cual trabajar, podemos enfocarnos en los modelos de las bases de datos, ya que con los datos vamos a trabar en las vistas, van a pasar por las rutas y van a tener una interacción constante en la base de datos.
+### Al tener ya la estructura con la cual trabajar, podemos enfocarnos en los modelos de las bases de datos, ya que con los datos vamos a trabar en las vistas, van a pasar por las rutas y van a tener una interacción constante en la base de datos.
 
 por Ejemplo en este proyecto nos están solicitando crear una vista de productos, otra de clientes y otra de ventas, en ellas van a estar presentes nuestros modelos de datos.
 
@@ -462,9 +460,9 @@ el id del producto, su nombre, una descripción, un precio y una cantidad de sto
 
 hagamos ese primer modelo y vamos viendo los otros.
 
-Ingresamos al archivo models.py
+Ingresamos al archivo **models.py**
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2029.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690076640/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_54_sne28h.png)
 
 vemos que el archivo de forma predeterminada importa una clase models del framework django, gracias a esto podemos crear nuestros propios modelos.
 
@@ -474,9 +472,9 @@ Para crear un modelo debemos hacer lo siguiente:
 
 Definimos nuestro modelo como una clase, e insertamos como parámetro el modelo de Models de Django:
 
-class Productos(models.Model):
+**class Productos(models.Model)**:
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2030.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690076669/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_55_vl1e8g.png)
 
 Esta estructura indica que la clase productos va a ser el nombre de la tabla y gracias a los parámetros del modelo de Django, nos permite interactuar internamente en la tabla, por ejemplo los tipos de datos, el máximo de caracteres, llaves primarias, foráneas, condiciones, etc…
 
@@ -510,23 +508,20 @@ para ensayar como funciona los modelos; podemos migrar esta primer tabla o model
 
 **Recuerda migraciones:**
 
-- py [manage.py](http://manage.py) makemigrations
-- py [manage.py](http://manage.py) migrate
+- py **manage.py** makemigrations
+- py **manage.py** migrate
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2031.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690076739/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_57_mvtorw.png)
 
 visualizamos en la db:
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2032.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690076757/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_58_ihhsxz.png)
 
 Podemos ver después de la migración, la tabla creada fácilmente
 
-<aside>
-📎 Recuerda ver los archivos en el Repositorio github: [https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git](https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git)
+> * 📎 **Repositorio GitHub:** <a href="https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git" target="_blank"> Link github </a>
 
-</aside>
-
-# Ahora pasemos al modelo de clientes:
+### Ahora pasemos al modelo de clientes:
 
 Posiblemente necesitemos el id del cliente, nombre del cliente y correo. algo sencillito.
 
@@ -540,7 +535,7 @@ class Clientes(models.Model):
 
 Podemos enviar la migración al finalizar los modelos, no hay problema.
 
-# Ahora pasemos al modelo de las ventas:
+### Ahora pasemos al modelo de las ventas:
 
 necesitamos el id de la venta, el id del producto, cantidad vendida, el precio de venta, el total de la venta lo podemos pintar en la vista, multiplicando la cantidad por el precio de venta, necesitamos el id del cliente.
 
@@ -565,14 +560,14 @@ class Ventas(models.Model):
 
 Ahora sí enviamos la migración:
 
-- py [manage.py](http://manage.py) makemigrations
-- py [manage.py](http://manage.py) migrate
+- py **manage.py** makemigrations
+- py **manage.py** migrate
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2033.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690076948/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_59_u6kzgw.png)
 
 Ya tenemos las 3 tablas que necesitamos:
 
-![Untitled](Proyecto%20tienda%20Con%20Django%20+%20SQLite%20315443d21ec04925982d56a05b98cba2/Untitled%2034.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690076964/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_60_nm7qri.png)
 
 **y la de ventas con su llave primaria y secundarias**
 
