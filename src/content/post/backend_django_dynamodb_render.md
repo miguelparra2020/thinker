@@ -104,12 +104,12 @@ a{
     max-width: 50rem;
 }
 
-    /* @media screen and (max-width: 600px) {
+    @media (max-width: 700px) {
         
-        .div_img{
-            max-width:300px;
-        }
-    } */
+        .contenido_publicacion{
+    width: 80%;
+}
+    }
 </style>
 
 <!-- Creador del curso -->
