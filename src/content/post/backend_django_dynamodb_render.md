@@ -92,20 +92,7 @@ canonical: https://thinker-cursos.vercel.app/backend_django_dynamodb_render
 a{
     text-decoration: none;
 }
-.contenedor_certificado{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.div_img_qr_certificado{
-    max-width:25rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+
 .contenedor_contenido{
     width: 100%;
     display: flex;
@@ -117,12 +104,12 @@ a{
     max-width: 50rem;
 }
 
-    @media screen and (max-width: 600px) {
+    /* @media screen and (max-width: 600px) {
         
         .div_img{
             max-width:300px;
         }
-    }
+    } */
 </style>
 
 <!-- Creador del curso -->
@@ -214,11 +201,11 @@ comprobamos con los siguientes comandos:
 
 - python --version
 
-![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690074876/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_28_ba2gv8.png)
+<!-- ![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690074876/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_28_ba2gv8.png) -->
 
 - django-admin --version
-
-![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690074897/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_29_jlnkoq.png)
+<!-- 
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690074897/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_29_jlnkoq.png) -->
 
 
 Con python y django ya tenemos todo para que funcione: si no los tienes mira donde descargarlos:
@@ -238,10 +225,10 @@ en la terminal enviamos el comando:
 Lo que se dice con este comando es que por medio de django que es el framework vamos a inicializar un proyecto con el nombre cualquiera que desees y luego un espacio y punto para mantenernos en el mismo nivel de carpetas. ya que si lo dejas sin el punto al final crea una carpeta adicional y más adentro el proyecto.
 
 Así fue el nuestro: 
-
+<!-- 
 ![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690075122/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_30_vzruz1.png)
 
-![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690075138/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_31_quelaz.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690075138/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_31_quelaz.png) -->
 
 Ya nos creó el proyecto base, por fuera el archivo manage.py que es como el inicializador de comandos del proyecto y nos permite muchas funcionalidades y dentro del proyecto utilizaremos más el archivo **settings** y el archivo **Urls**
 
@@ -261,9 +248,9 @@ la app  llamémosla **StoreApp. (”Puedes llamarla como desees”)**
 
 así quedó la nuestra:
 
-![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690075822/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_35_fk49yr.png)
+<!-- ![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690075822/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_35_fk49yr.png)
 
-![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690075839/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_36_k4gmnt.png)
+![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690075839/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_36_k4gmnt.png) -->
 
 en los próximos comandos podemos acortarlo pasando de **python** a **py**
 
@@ -306,7 +293,7 @@ INSTALLED_APPS = [
 
 a nuestro proyecto por defecto viene incluida dicha relación en el archivo settings. 
 
-![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690075399/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_33_uirt29.png)
+<!-- ![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690075399/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_33_uirt29.png) -->
 
 Esto es muy bueno ya que es una base de datos sencilla y fácil de manejar, para proyectos pequeños. cuando corremos el proyecto por primer vez si no tiene la base de datos creada ella se creará por primer ves en blanco. recuerda que puedes incluir otro o otros tipos de bases de datos más robustas, pero debes ver la documentación para implementarlas.
 
@@ -314,4 +301,4 @@ en nuestro caso no debemos hacer nada sino solamente correr el proyecto por prim
 
 - py **manage.py** runserver
 
-![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690075899/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_37_wpmqi4.png)
+<!-- ![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690075899/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_37_wpmqi4.png) -->
