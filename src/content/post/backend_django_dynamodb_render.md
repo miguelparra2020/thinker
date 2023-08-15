@@ -210,8 +210,8 @@ comprobamos con los siguientes comandos:
 
 Con python y django ya tenemos todo para que funcione: si no los tienes mira donde descargarlos:
 
-> * 📖 **Python:** <a href="https://www.python.org/downloads/" target="_blank"> https://www.python.org/downloads/ </a> 
-> * 📖 **Django:** <a href="https://www.djangoproject.com/download/" target="_blank"> https://www.djangoproject.com/download/ </a>
+> * 📖 **Python:** <a href="https://www.python.org/downloads/" target="_blank"> descargar </a> 
+> * 📖 **Django:** <a href="https://www.djangoproject.com/download/" target="_blank"> descargar </a>
 
 
 ### Ahora sí creemos la base estructural
