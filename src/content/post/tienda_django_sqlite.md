@@ -115,10 +115,11 @@ a{
 .contenido_publicacion{
     max-width: 50rem;
 }
+
     @media screen and (max-width: 600px) {
-        iframe {
-            width: 100%;
-            height: 34000px;
+        
+        .div_img{
+            max-width:300px;
         }
     }
 </style>
@@ -196,7 +197,11 @@ Para realizar todo proyecto es bueno tener una perspectiva global de la infraest
 
 En nuestro caso vamos a manejar el patrón de Diseño **MVC**: Modelo vista controlador, en Django es Similar con **MVT**: Modelo vista témplate.
 
+<div class="div_img">
+
 ![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690074681/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_24_zbndyk.png)
+
+</div>
 
 Todos los archivos del proyecto se van a mantener dentro del mismo servidor.
 
@@ -1417,9 +1422,11 @@ en la página de clientes también adicionamos un botón para que pueda ir a la 
 ```python
 <a href="/crear_cliente/">Crear un nuevo cliente</a>
 ```
+<div class="div_img">
 
 ![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690081169/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_81_njufva.png)
 
+</div>
 ![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690081185/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_82_symyil.png)
 
 > * 📎 **Repositorio GitHub:** <a href="https://github.com/thinkercursos2023/tienda_django_full_stack_basica.git" target="_blank"> Link github </a>
@@ -1441,3 +1448,6 @@ Así queda el proyecto:
 ![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690081387/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_87_qlhuky.png)
 
 ![Untitled](https://res.cloudinary.com/dvey7dssc/image/upload/v1690081401/Thinker%20files/Tienda%20con%20Django%20%20Sqlite%20MVC%20%20MVT/Untitled_88_zps1ry.png)
+
+</div>
+</div>
