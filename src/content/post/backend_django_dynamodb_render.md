@@ -107,7 +107,7 @@ a{
     @media (max-width: 700px) {
         
         .contenido_publicacion{
-    width: 80%;
+    width: 94%;
 }
     }
 </style>
