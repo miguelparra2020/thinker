@@ -159,3 +159,64 @@ a{
     </div>
 </div>
 <!-- Donación a la plataforma -->
+
+Te comparto el código para que lo pongas en práctica en tus proyectos:
+
+Es un archivo HTML con CSS, puedes adaptarlo en cualquier tipo de proyecto web
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body-content {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  height: 500vh; /* 5 slides * 100vh cada uno */
+}
+
+.div-slide {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.color-1 {
+  background-color: #f1f1f1;
+}
+
+.color-2 {
+  background-color: #e1e1e1;
+}
+
+    </style>
+
+</head>
+<body>
+    <div class="body-content">
+        <div class="slider">
+            <div class="div-slide color-1">Slide 1</div>
+            <div class="div-slide color-2">Slide 2</div>
+            <div class="div-slide color-1">Slide 3</div>
+            <div class="div-slide color-2">Slide 4</div>
+            <div class="div-slide color-1">Slide 5</div>
+        </div>
+    </div>
+    
+      
+      
+</body>
+</html>
+```
