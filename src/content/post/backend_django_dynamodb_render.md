@@ -161,9 +161,6 @@ a{
     </div>
 </div>
 
-<!-- Iframe del curso en: https://learningstudioai.com/ -->
-<!-- <iframe width="100%" height="28000px" src="https://learningstudioai.com/go/EjSeVEm7q1RCwM6mfE2S" title="Curso de Introducción a HTML | LearningStudioAI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
-
 <!-- Opciones para descargar el certificado -->
 <div class="contenedor_contenido">
 <div class="contenido_publicacion">
