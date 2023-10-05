@@ -1,8 +1,8 @@
 ---
 publishDate: 1899-12-27T00:00:00Z
 title: Exportar variables CSS o SCSS 
-description: Este meto es muy útil cuando tienes estilos que se pueden llegar a repetir en otras hojas de estilo, lo más común son colores, fuentes, box shadows, etc, por ende para tener uniformidad podemos crear un archivo ya sea global o separa por nuestro propósito y este reutilizarlo en diferentes hojas de estilo
-excerpt: Este meto es muy útil cuando tienes estilos que se pueden llegar a repetir en otras hojas de estilo, lo más común son colores, fuentes, box shadows, etc, por ende para tener uniformidad podemos crear un archivo ya sea global o separa por nuestro propósito y este reutilizarlo en diferentes hojas de estilo
+description: Este método es muy útil cuando tienes estilos que se pueden llegar a repetir en otras hojas de estilo, lo más común son colores, fuentes, box shadows, etc, por ende para tener uniformidad podemos crear un archivo ya sea global o separado por nuestro propósito y este reutilizarlo en diferentes hojas de estilo
+excerpt: Este método es muy útil cuando tienes estilos que se pueden llegar a repetir en otras hojas de estilo, lo más común son colores, fuentes, box shadows, etc, por ende para tener uniformidad podemos crear un archivo ya sea global o separado por nuestro propósito y este reutilizarlo en diferentes hojas de estilo
 image: ~/assets/images/exportar_variables_css_scss.png
 category: cursos-y-contenido-en-desarrollo-web
 tags:
