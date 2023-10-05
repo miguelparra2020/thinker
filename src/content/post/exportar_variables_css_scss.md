@@ -1,15 +1,15 @@
 ---
-publishDate: 1899-12-28T00:00:00Z
-title: Diseño personalizado del SCROLL BAR
-description: Para que su plataforma web tenga un scroll bar que tenga un aspecto al que viene por defecto debes hacer lo siguiente
-excerpt: Para que su plataforma web tenga un scroll bar que tenga un aspecto al que viene por defecto debes hacer lo siguiente
-image: ~/assets/images/scroll_bar_personalizado.png
+publishDate: 1899-12-27T00:00:00Z
+title: Exportar variables CSS o SCSS 
+description: Este meto es muy útil cuando tienes estilos que se pueden llegar a repetir en otras hojas de estilo, lo más común son colores, fuentes, box shadows, etc, por ende para tener uniformidad podemos crear un archivo ya sea global o separa por nuestro propósito y este reutilizarlo en diferentes hojas de estilo
+excerpt: Este meto es muy útil cuando tienes estilos que se pueden llegar a repetir en otras hojas de estilo, lo más común son colores, fuentes, box shadows, etc, por ende para tener uniformidad podemos crear un archivo ya sea global o separa por nuestro propósito y este reutilizarlo en diferentes hojas de estilo
+image: ~/assets/images/exportar_variables_css_scss.png
 category: cursos-y-contenido-en-desarrollo-web
 tags:
   - desarrollo_web
   - html
   - css
-canonical: https://thinker-cursos.vercel.app/scroll_bar_personalizado
+canonical: https://thinker-cursos.vercel.app/exportar_variables_css_scss
 ---
 <!-- 
 1- Rutas academicas del 2000 - 2050 
@@ -160,71 +160,75 @@ a{
 </div>
 <!-- Donación a la plataforma -->
 
-- Saber si desear tener un scroll bar diferente para toda la plataforma, para todas las páginas
-- o si deseas tener este scroll bar personalizado para un contenedor especifico o página especifica
+por ejemplo crear el archivo: global.css ó colors.css ó fonts.css 
 
-En el primer caso si deseas aplicarlo en todas las páginas te puedes situar en lá página base, casi todos los frameworks web tienen una página base o layout base y desde allí aplican estilos generales, SEO, metados etc 
+Así dejamos declarado estas variables que vamos a utilizarlas constantemente en otras hojas de estilo y ahorramos tiempo, ahorramos líneas de código y también uniformidad en nuestro desarrollo.
 
-desde allí vas a aplicar el siguiente código:
+Vamos  a hacer un ejemplo con un archivo: colors.css
 
-```html
-<html>
-<head>
-<style>
-			/* Estilo del scroll vertical */
-			body::-webkit-scrollbar {
-				width: 2px; /* Ancho del scroll */
-			}
-
-			body::-webkit-scrollbar-thumb {
-				background-color: #a5a5a5; /* Color de la barra del scroll */
-				border-radius: 4px; /* Borde redondeado de la barra */
-			}
-
-			body::-webkit-scrollbar-thumb:hover {
-				background-color: #888; /* Color de la barra del scroll al pasar el mouse */
-			}
-
-			/* Estilo del scroll horizontal (si es necesario) */
-			body::-webkit-scrollbar-track {
-			background-color: #f1f1f1; /* Color de fondo del scroll */
-			}
-
-			/* Estilo del scroll en Firefox (si es necesario) */
-			scrollbar-width: thin; /* Ancho del scroll en Firefox */
-			scrollbar-color: #a5a5a5 #f1f1f1; 
-		</style>
-	</head>
-<body> ....
+```css
+:root {
+    --color-1: #007bff;
+    --color-2: #ff5733;
+    --color-3: #f1f1f1;
+    --color-4: red;
+    --color-5: yellow;
+    --color_6: orange;
+    --color-white: white;
+    --color-black: black;
+  }
 ```
 
-Allí estamos realizando dichos estilos aplicados al body y esto sería un estilo de scroll general
+En este se creo una paleta de colores que posiblemente utilicemos en todas las páginas
 
-si deseas a un contenedor aplícalo así y puedes estar en la hoja de estilos de dicho componente:
+por ende en la página inicial o home page creamos el archivo index.css
 
-```html
-<style>
-			/* Estilo del scroll vertical */
-			.contenedor::-webkit-scrollbar {
-				width: 2px; /* Ancho del scroll */
-			}
+```css
+@import './colors.css';
 
-			.contenedor::-webkit-scrollbar-thumb {
-				background-color: #a5a5a5; /* Color de la barra del scroll */
-				border-radius: 4px; /* Borde redondeado de la barra */
-			}
-
-			.contenedor::-webkit-scrollbar-thumb:hover {
-				background-color: #888; /* Color de la barra del scroll al pasar el mouse */
-			}
-
-			/* Estilo del scroll horizontal (si es necesario) */
-			.contenedor::-webkit-scrollbar-track {
-			background-color: #f1f1f1; /* Color de fondo del scroll */
-			}
-
-			/* Estilo del scroll en Firefox (si es necesario) */
-			scrollbar-width: thin; /* Ancho del scroll en Firefox */
-			scrollbar-color: #a5a5a5 #f1f1f1; 
-		</style>
+.div{
+    width: 100%;
+    height: 50vh;
+    background-color: var(--color-1);
+}
 ```
+
+Lo que hicimos en este fue importar el archivo de colores y utilizamos sus variables con: 
+
+var(—color-1);
+
+Si vamos a utilizar scss sería así:
+
+en scss se crean las variables y luego se exportan, aquí sería desde el archivo colors.scss
+
+```scss
+$color_1: #333333;
+$color_2: #9ea0a2;
+$color_3: #7a7a7a;
+$color_4: #575655;
+$color_white: #ffffff;
+$color_black: #000000;
+
+:export {
+    color_1: $color_1;
+    color_2: $color_2;
+    color_3: $color_3;
+    color_4: $color_4;
+    color_white: $color_white;
+    color_black: $color_black;
+}
+```
+
+en el archivo index.scss
+
+```scss
+@import './colors.scss';
+
+.div{
+    width: 100%;
+    height: 50vh;
+    background-color: $color_1;
+}
+```
+
+en este archivo importamos colors y lo utilizamos con la variable: $color_1
